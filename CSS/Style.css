@@ -1,0 +1,504 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.content {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.tablet-view, .desktop-view, .disappear {
+    display: none;
+}
+
+.highlighted {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    color: orangered;
+}
+
+button {
+    background-color: teal;
+    border: none;
+    padding: 10px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+hr {
+    height: 2px;
+    width: 75%;
+    margin: 0px auto;
+    background-color: goldenrod;
+    border: none;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*  GLOBAL - END    */
+
+header .company-logo {
+    padding: 10px 0px;
+}
+
+header .company-logo a h1 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+}
+
+header nav {
+    height: 50px;
+    background-color: navy;
+    border-bottom: 2px solid goldenrod;
+}
+
+header nav ul {
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+header nav ul li a:hover {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-view {
+        display: none;
+    }
+
+    .tablet-view {
+        display: block;
+    }
+
+    header nav .content {
+        align-items: center;
+    }
+
+    header nav .content .company-logo a h1 {
+        font-size: 22px;
+        color: #fff;
+    }
+
+    header nav .content {
+        justify-content: space-between;
+    }
+
+    header nav .content ul {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header nav .content ul {
+        width: 17.5%;
+    }
+}
+
+/*
+    Main - Contact
+*/
+#mail {
+    background-color: navy;
+    padding: 20px 0px;
+}
+
+#mail .flex {
+    justify-content: space-evenly;
+}
+
+form {
+    height: 0px;
+    overflow: hidden;
+
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+form .flex {
+    flex-direction: column;
+    align-items: center;
+}
+
+form #email-area {
+    margin: 10px 0px 0px;
+    padding: 5px 0px;
+    width: 80%;
+    border: 0px;
+
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+#mail textarea {
+    resize: none;
+}
+
+form #email-area-two {
+    margin: 10px 0px 0px;
+    padding: 5px 0px;
+    width: 80%;
+    border: 0px;
+
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+form #text-area {
+    margin: 10px 0px 10px;
+    height:350px;
+    width: 80%;
+    border: 0px;
+}
+
+form #text-area-two {
+    margin: 10px 0px 10px;
+    height:350px;
+    width: 80%;
+    border: 0px;
+}
+
+#mail .send-button-container i {
+    color: #fff;
+    font-size: 24px;
+    background-color: teal;
+    padding: 5px 10px;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+#mail .tablet-view .button-left {
+    transition: 0.15s;
+    transition-delay: 0.6s;
+}
+
+@media only screen and (min-width: 768px) {
+    #mail #send-mail-two {
+        justify-content: space-between;
+    }
+
+    #mail #send-mail-two .email-two {
+        width: 45%;
+    }
+
+    #mail #send-mail-two #email-area-two {
+        width: 100%;
+    }
+
+    #mail #send-mail-two .text-area-two {
+        width: 50%;
+    }
+
+    #mail #send-mail-two #text-area-two {
+        width: 100%;
+    }
+
+    #send-mail-two .send-button-container {
+        flex-direction: row;
+        padding: 10px 0px 0px;
+    }
+}
+
+/*
+    Main - Projects
+*/
+#projects {
+    padding: 50px 0px;
+}
+
+#projects h3 {
+    text-align: center;
+    font-weight: normal;
+}
+
+#projects .project-container {
+    padding: 10px 0px 0px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .project-container .project {
+    background-color: lightgray;
+    padding: 20px 75px;
+    margin: 10px auto 0px;
+}
+
+#projects .project-container .project:hover {
+    background-color: gray;
+
+    transition: 0.5s ease-in-out;
+}
+
+#projects .project-container a {
+    color: #111;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+    #projects .project-container {
+        padding: 10px 0px 0px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #projects .project-container .project {
+        background-color: lightgray;
+        padding: 20px 75px;
+        margin: 20px 10px 0px;
+    }
+
+}
+
+/*
+    Main - Testimonials
+*/
+#testimonial h3 {
+    text-align: center;
+}
+
+.testimonial-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    padding: 20px 0px;
+}
+
+.testimonial q {
+    font-size: 30px;
+}
+
+.testimonial .client-project {
+    float: right;
+    text-align: right;
+}
+
+@media only screen and (min-width: 1024px) {
+    #testimonial h3 {
+        padding-bottom: 30px;
+    }
+
+    #testimonial .testimonial-container hr {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+
+    #testimonial .testimonial-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #testimonial .testimonial-container .testimonial {
+        width: 30%;
+    }
+}
+
+/*
+    About
+*/
+#about #about-us {
+    padding: 20px 0px 50px;
+}
+
+#about #services {
+    padding: 0px 0px 50px;
+}
+
+#about .content .flex {
+    display: block;
+}
+
+#about #quality {
+    padding: 0px 0px 20px;
+}
+
+#about section h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#about section p {
+    text-align: justify;
+    text-indent: 10mm;
+}
+
+@media only screen and (min-width: 768px) {
+    header nav .content .about {
+        display: block;
+    }
+
+    header nav .content .about li {
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #about .content .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #about .content .flex section {
+        width: 48%;
+    }
+}
+
+/*
+    Project
+*/
+#project-one {
+    padding: 20px 0px 50px;
+}
+
+#project-one .project h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#project-one .project article p {
+    text-indent: 10mm;
+    text-align: justify;
+    line-height: 20px;
+}
+
+#project-one .project .project-image {
+    background-color: navy;
+    height: 175px;
+    width: 100%;
+    margin: 20px 0px 10px;
+}
+
+#project-one .project .project-image h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#project-one hr {
+    margin: 50px auto 0px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    #project-one .project .project-image {
+        width: 90%;
+        height: 300px;
+        margin: 20px auto 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #project-one .project .project-image {
+        width: 95%;
+        height: 400px;
+        margin: 20px auto 10px;
+    }
+
+    #project-one .project .mobile-view {
+        display: none;
+    }
+
+    #project-one .testimonial {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+/*
+    FOOTER
+*/
+footer {
+    background-color: navy;
+    color: white;
+}
+
+footer .content {
+    padding: 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-media {
+    width: 40%;
+    justify-content: space-between;
+}
+
+footer .social-media i {
+    font-size: 26px;
+    color: white;
+}
+
+footer .social-media i:hover {
+    transform: scale(1.5);
+    
+    transition: 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 535px) {
+    /*
+        About
+    */
+    .fixed-bottom {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer .social-media {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    footer .social-media {
+        width: 15%;
+    }
+}

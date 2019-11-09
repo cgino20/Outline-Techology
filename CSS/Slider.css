@@ -1,0 +1,115 @@
+/*
+    MAIN - Sliding Banner
+*/
+.slide {
+    overflow: hidden;
+}
+
+#sliding-banner {
+    width: 400%;
+    position: relative;
+
+    animation: slide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#sliding-banner .slide-image {
+    width: 25%;
+    height: calc(75vh - 88px);
+    float: left;
+}
+
+#sliding-banner #image-one {
+    background-image: url(../Photos/Slideshows/Slide_01\ Home\ Automation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sliding-banner #image-two {
+    background-image: url(../Photos/Slideshows/Slide_02\ Microcontroller.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+#sliding-banner #image-three {
+    background-image: url(../Photos/Slideshows/Slide_03\ Workshop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sliding-banner .description p {
+    font-size: 28px;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    text-shadow: 0px 2px 0px #111;
+}
+
+#sliding-banner .dimmed {
+    background: rgba(0, 0, 128, 0.25);
+}
+
+@media only screen and (min-width: 768px) {
+    #sliding-banner .description p {
+        width: 40%;
+        text-align: right;
+        float: right;
+        font-size: 28px;
+        color: #fff;
+        text-align: right;
+        line-height: 48px;
+    }
+    
+    #sliding-banner .display-table {
+        display: table;
+    }
+
+    #sliding-banner .display-table-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    #sliding-banner .gradient {
+        overflow: hidden;
+        background: linear-gradient(to left, rgba(0, 0, 128, 0.6), rgba(0, 0, 0, 0));
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    30% {
+        left: -100%;
+    }
+
+    50% {
+        left: -100%;
+    }
+
+    55% {
+        left: -200%;
+    }
+
+    75% {
+        left: -200%;
+    }
+
+    80% {
+        left: -300%;
+    }
+
+    100% {
+        left: -300%;
+    }
+}
