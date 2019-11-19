@@ -13,12 +13,32 @@
     margin: 0px auto;
 }
 
-.flex {
-    display: flex;
+.tablet-view, .desktop-view {
+    display: none;
 }
 
-.tablet-view, .desktop-view, .disappear {
-    display: none;
+@media only screen and (min-width: 768px) {
+    .mobile-view {
+        display: none;
+    }
+
+    .tablet-view {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tablet-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+}
+
+.flex {
+    display: flex;
 }
 
 .highlighted {
@@ -95,14 +115,6 @@ header nav ul li a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-    .mobile-view {
-        display: none;
-    }
-
-    .tablet-view {
-        display: block;
-    }
-
     header nav .content {
         align-items: center;
     }
@@ -246,10 +258,11 @@ form #text-area-two {
 
 #projects .project-container {
     padding: 10px 0px 0px;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+#projects .project-group-one, .project-group-two {
+    flex-direction: column;
 }
 
 #projects .project-container .project {
@@ -268,6 +281,7 @@ form #text-area-two {
     color: #111;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -284,6 +298,22 @@ form #text-area-two {
         margin: 20px 10px 0px;
     }
 
+}
+
+@media only screen and (min-width: 1024px) {
+    #projects .project-container {
+        flex-direction: row;
+    }
+
+    #projects .project-container .project-group-one, .project-group-two {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    #projects .project-container .project-group-one, .project-group-two {
+        flex-direction: column;
+    }
 }
 
 /*
@@ -319,10 +349,6 @@ form #text-area-two {
 
     #testimonial .testimonial-container hr {
         display: none;
-    }
-
-    .desktop-view {
-        display: block;
     }
 
     #testimonial .testimonial-container {
@@ -439,10 +465,6 @@ form #text-area-two {
         margin: 20px auto 10px;
     }
 
-    #project-one .project .mobile-view {
-        display: none;
-    }
-
     #project-one .testimonial {
         width: 70%;
         margin: auto;
@@ -500,5 +522,13 @@ footer .social-media i:hover {
 @media only screen and (min-width: 1024px) {
     footer .social-media {
         width: 15%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
     }
 }
